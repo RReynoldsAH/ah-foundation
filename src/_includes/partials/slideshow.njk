@@ -1,0 +1,19 @@
+{#- Photo slideshow. Expects a `photos` list of { image, alt } and a `slideshowLabel`. -#}
+{%- if photos and photos.length %}
+<div class="photo-slideshow" data-slideshow>
+  <div class="slideshow-track">
+    {%- for p in photos %}
+    <figure class="slide{% if loop.first %} is-active{% endif %}">
+      <img src="{{ p.image | asset }}" alt="{{ p.alt }}" loading="{% if loop.first %}eager{% else %}lazy{% endif %}">
+    </figure>
+    {%- endfor %}
+  </div>
+  {%- if photos.length > 1 %}
+  <div class="slideshow-dots" role="tablist" aria-label="{{ slideshowLabel or 'Photos' }}">
+    {%- for p in photos %}
+    <button class="dot{% if loop.first %} is-active{% endif %}" type="button" data-index="{{ loop.index0 }}" aria-label="Show photo {{ loop.index }} of {{ photos.length }}"></button>
+    {%- endfor %}
+  </div>
+  {%- endif %}
+</div>
+{%- endif %}

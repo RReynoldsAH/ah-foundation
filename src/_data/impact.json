@@ -1,0 +1,31 @@
+{
+  "metrics_heading": "Measured by Verified Foundation Data",
+  "metrics": [
+    { "value": 30, "suffix": "+", "label": "Organizations Supported" },
+    { "value": 12, "suffix": "+", "label": "Communities Served" },
+    { "value": 150, "suffix": "+", "label": "People Reached" },
+    { "value": 5, "suffix": "", "label": "States Impacted" },
+    { "value": 2, "suffix": "", "label": "Countries Impacted" },
+    { "value": 3, "suffix": "", "label": "Years of Community Investment" }
+  ],
+  "metrics_note": "Figures shown are illustrative placeholders pending confirmed, verified Foundation data — update via CMS before launch.",
+  "featured_story": {
+    "eyebrow": "Featured Impact Story",
+    "title": "Faith in Action: Serving Communities in Jamaica",
+    "intro": "Working alongside Fresh Bread Ministries, Refuge of Hope, and dedicated ministry partners, the AH Foundation helped support outreach efforts throughout Montego Bay and the Westmoreland region of Jamaica.",
+    "highlights_label": "Impact highlights include:",
+    "highlights": [
+      "150+ community members served",
+      "Health screenings and basic medical support",
+      "Children's ministry and family engagement",
+      "Prayer, encouragement, and faith-centered outreach"
+    ],
+    "closing": "This is what meaningful partnership looks like: organizations coming together to serve people and strengthen communities.",
+    "photos": []
+  },
+  "more_stories": {
+    "eyebrow": "More Stories",
+    "heading": "Partnership in Every Region We Serve",
+    "intro": "Additional stories will be added here as new partnerships and outreach efforts are confirmed."
+  }
+}

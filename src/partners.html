@@ -1,0 +1,89 @@
+---
+layout: layouts/base.njk
+tags: pages
+priority: "0.9"
+changefreq: weekly
+title: "Our Partners | AH Foundation"
+description: "Meet the faith-based and nonprofit organizations partnering with the AH Foundation to strengthen communities through service, compassion, and shared purpose."
+keywords: "AH Foundation partners, nonprofit partners, faith-based ministry partners, community organizations"
+ogDescription: "The AH Foundation values relationships with organizations that understand their communities, serve with purpose, and create meaningful impact."
+permalink: "partners.html"
+breadcrumbName: "Our Partners"
+---
+  <section class="page-hero">
+    <div class="hero-bg-pattern" aria-hidden="true"></div>
+    <div class="container">
+      <div class="page-hero-inner">
+        <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Our Partners</span></div>
+        <span class="hero-eyebrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15l6-6"/><path d="M8 17l-2.5 2.5a3.5 3.5 0 01-5-5L3 12"/><path d="M16 7l2.5-2.5a3.5 3.5 0 015 5L21 12"/></svg>
+          Our Partners
+        </span>
+        <h1>Organizations We Are Privileged to Serve Alongside</h1>
+        <p>The AH Foundation values relationships with organizations that understand their communities, serve with purpose, and create meaningful impact. Each partnership reflects a shared commitment to strengthening people and communities.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-cream">
+    <div class="container">
+
+      <div class="filter-bar" data-reveal role="group" aria-label="Filter partners by category">
+        <button class="filter-chip is-active" data-filter="all">All Partners</button>
+        {%- for c in categories %}
+        <button class="filter-chip" data-filter="{{ c.value }}">{{ c.label }}</button>
+        {%- endfor %}
+      </div>
+
+      <div class="partner-grid" data-reveal-stagger>
+        {%- for partner in partners.partners %}
+        <div class="partner-card" data-category="{{ partner.categories | join(',') }}">
+          <div class="partner-top">
+            {% include "partials/partner-logo.njk" %}
+            <div>
+              <div class="partner-name">{{ partner.name }}</div>
+              <div class="partner-loc">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-7.5 7-12a7 7 0 10-14 0c0 4.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                {{ partner.location }}
+              </div>
+            </div>
+          </div>
+          <span class="partner-focus">{{ partner.categories[0] | categoryLabel }}</span>
+          {%- if partner.mission %}
+          <p class="desc"><strong>Mission:</strong> {{ partner.mission }}</p>
+          {%- endif %}
+          {%- if partner.partnership_summary %}
+          <p class="desc"><strong>AH Foundation Partnership:</strong> {{ partner.partnership_summary }}</p>
+          {%- endif %}
+          {%- if partner.website %}
+          <a href="{{ partner.website }}" class="story-link" target="_blank" rel="noopener">Visit organization website
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4"/><path d="M14 4h6v6"/><path d="M20 4L10 14"/></svg>
+          </a>
+          {%- endif %}
+        </div>
+        {%- endfor %}
+
+      </div>
+
+      {% if partners.partners | selectattr("sample") | length %}
+      <div class="notice" style="margin-top:56px;" data-reveal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9.5 17H2.5L12 3z"/><path d="M12 10v4"/><circle cx="12" cy="17" r="0.6" fill="currentColor" stroke="none"/></svg>
+        <p><strong>Note for content editors:</strong> Two sample profiles above are templates for upcoming categories (Education, Youth Development) and should be replaced with confirmed partner information through the CMS. They are marked "Sample Partner Profile" so no real organization is implied.</p>
+      </div>
+      {% endif %}
+
+    </div>
+  </section>
+
+  <section class="closing-band">
+    <div class="container" data-reveal>
+      <h2>Know an Organization Making a Meaningful Difference?</h2>
+      <p>We're always building relationships with organizations doing important work in their communities.</p>
+      <div class="hero-actions">
+        <a href="approach.html" class="btn btn-gold">See Our Partnership Approach
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="contact.html" class="btn btn-outline">Contact the Foundation</a>
+      </div>
+    </div>
+  </section>

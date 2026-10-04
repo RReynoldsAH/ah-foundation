@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "eyebrow": "The AH Foundation",
+    "headline": "Sowing Into Communities. *Strengthening* Those Who Serve.",
+    "subtext": "The AH Foundation partners with faith-based and nonprofit organizations that are creating meaningful change in the lives of individuals, families, and communities. We believe meaningful impact happens through partnership.",
+    "primary_cta_label": "Explore Our Impact",
+    "secondary_cta_label": "Our Partnership Approach",
+    "stats": [
+      { "value": 30, "suffix": "+", "label": "Organizations Supported" },
+      { "value": 3, "suffix": "", "label": "Regions Served" },
+      { "value": 150, "suffix": "+", "label": "Community Members Reached" }
+    ],
+    "badge_title": "Partnership First",
+    "badge_text": "Relationship-driven, not application-driven."
+  },
+  "why": {
+    "eyebrow": "Why We Exist",
+    "heading": "Business Success. Community Impact.",
+    "paragraphs": [
+      "The AH Foundation was established from a belief that success creates both an opportunity and a responsibility to give back.",
+      "As INTEGRITY grows and serves customers in communities across the country, the AH Foundation seeks opportunities to invest back into those communities by supporting organizations already making a meaningful difference.",
+      "Rather than simply providing funding, the Foundation seeks to develop meaningful relationships with organizations that understand their communities and are creating lasting impact."
+    ],
+    "button_label": "Our Story",
+    "photos": [
+      { "image": "/assets/img/jamaica-mission-3.jpg", "alt": "Children and families gather together during the AH Foundation's Jamaica mission outreach" },
+      { "image": "/assets/img/jamaica-mission-1.jpg", "alt": "A boy raises his hand in worship during Vacation Bible School on the AH Foundation's Jamaica mission trip" },
+      { "image": "/assets/img/jamaica-mission-2.jpg", "alt": "Two young girls from the Savanna-la-Mar community smile during the AH Foundation's mission outreach" },
+      { "image": "/assets/img/jamaica-mission-4.jpg", "alt": "A community elder pauses for a portrait during the AH Foundation's Jamaica mission outreach" }
+    ]
+  },
+  "values": {
+    "eyebrow": "What Guides Us",
+    "heading": "The Values Behind Every Partnership",
+    "intro": "Four commitments shape how the AH Foundation identifies, builds, and sustains relationships with the organizations we support.",
+    "items": [
+      { "title": "Faith", "text": "Supporting organizations whose work reflects compassion, service, and Christian values." },
+      { "title": "Community", "text": "Investing in organizations addressing meaningful needs within the communities they serve." },
+      { "title": "Partnership", "text": "Building relationships with organizations rather than simply providing financial support." },
+      { "title": "Impact", "text": "Measuring success by lasting change in the lives of individuals, families, and communities." }
+    ]
+  },
+  "stories_section": {
+    "eyebrow": "Impact in Action",
+    "heading": "Stories From the Communities We Serve",
+    "intro": "A look at current partnerships and outreach efforts demonstrating the Foundation's work in real communities."
+  },
+  "partners_section": {
+    "eyebrow": "Featured Partners",
+    "heading": "Organizations We're Privileged to Serve Alongside",
+    "intro": "A glimpse at the faith-based and nonprofit organizations partnering with the AH Foundation. Visit the full directory to see every partner.",
+    "show_more_card": true
+  },
+  "closing": {
+    "heading": "We Believe Meaningful Impact Happens Through Partnership.",
+    "text": "By investing in trusted organizations, building lasting relationships, and supporting work already changing lives, we can accomplish more together."
+  }
+}

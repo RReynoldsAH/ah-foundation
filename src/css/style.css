@@ -827,3 +827,7 @@ body.nav-open { overflow: hidden; }
   .process-item::before { width: 48px; height: 48px; font-size: 14px; }
   .process-item::after { left: 23px; top: 48px; }
 }
+
+/* ---------- Partner logo (uploaded image) ---------- */
+.partner-logo.has-image { background: var(--white); border: 1px solid rgba(22, 68, 47, 0.12); padding: 6px; overflow: hidden; }
+.partner-logo.has-image img { width: 100%; height: 100%; object-fit: contain; display: block; }

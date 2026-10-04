@@ -1,0 +1,10 @@
+[
+  { "value": "faith-based-ministry", "label": "Faith-Based Ministry" },
+  { "value": "humanitarian-relief", "label": "Humanitarian Relief" },
+  { "value": "international-missions", "label": "International Missions" },
+  { "value": "community-outreach", "label": "Community Outreach" },
+  { "value": "education", "label": "Education" },
+  { "value": "youth-development", "label": "Youth Development" },
+  { "value": "workforce-development", "label": "Workforce Development" },
+  { "value": "family-support", "label": "Family Support" }
+]

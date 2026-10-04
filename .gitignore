@@ -1,0 +1,5 @@
+node_modules/
+_site/
+
+# raw source material, not part of the website
+post photos/

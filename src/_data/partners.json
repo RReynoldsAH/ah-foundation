@@ -1,0 +1,52 @@
+{
+  "partners": [
+    {
+      "name": "Fresh Bread Ministries",
+      "location": "Montego Bay, Jamaica",
+      "categories": ["faith-based-ministry", "international-missions"],
+      "brief_overview": "A ministry partner supporting community outreach, health screenings, and family engagement throughout Montego Bay.",
+      "mission": "Serving communities in and around Montego Bay through faith-centered outreach, health support, and family engagement.",
+      "partnership_summary": "Ministry partner in the Foundation's Jamaica outreach efforts, supporting community health screenings and children's ministry.",
+      "logo": "",
+      "website": "",
+      "featured": true,
+      "sample": false
+    },
+    {
+      "name": "Refuge of Hope",
+      "location": "Westmoreland, Jamaica",
+      "categories": ["humanitarian-relief", "community-outreach"],
+      "brief_overview": "Serving the Westmoreland region with humanitarian relief, prayer, encouragement, and faith-centered outreach.",
+      "mission": "Providing humanitarian relief, prayer, and encouragement to families throughout the Westmoreland region.",
+      "partnership_summary": "Ministry partner supporting outreach efforts and basic medical support alongside Foundation teams.",
+      "logo": "",
+      "website": "",
+      "featured": true,
+      "sample": false
+    },
+    {
+      "name": "Sample Partner Profile",
+      "location": "City, State",
+      "categories": ["education"],
+      "brief_overview": "",
+      "mission": "Placeholder text demonstrating how an Education-focused partner profile will appear once confirmed.",
+      "partnership_summary": "This card is a template only — replace with confirmed partner content in the CMS.",
+      "logo": "",
+      "website": "",
+      "featured": false,
+      "sample": true
+    },
+    {
+      "name": "Sample Partner Profile",
+      "location": "City, State",
+      "categories": ["youth-development"],
+      "brief_overview": "",
+      "mission": "Placeholder text demonstrating how a Youth Development partner profile will appear once confirmed.",
+      "partnership_summary": "This card is a template only — replace with confirmed partner content in the CMS.",
+      "logo": "",
+      "website": "",
+      "featured": false,
+      "sample": true
+    }
+  ]
+}

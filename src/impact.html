@@ -1,0 +1,125 @@
+---
+layout: layouts/base.njk
+tags: pages
+priority: "0.9"
+changefreq: weekly
+title: "Our Impact | AH Foundation"
+description: "See the impact of the AH Foundation's partnerships — from community outreach in Jamaica to organizations strengthening families across the country."
+keywords: "AH Foundation impact, community impact metrics, Jamaica outreach, faith-based impact stories"
+ogDescription: "Our impact is reflected in the organizations and communities we are privileged to support through purposeful partnership."
+permalink: "impact.html"
+breadcrumbName: "Our Impact"
+---
+  <section class="page-hero">
+    <div class="hero-bg-pattern" aria-hidden="true"></div>
+    <div class="container">
+      <div class="page-hero-inner">
+        <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Our Impact</span></div>
+        <span class="hero-eyebrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
+          Our Impact
+        </span>
+        <h1>Impact Through Partnership</h1>
+        <p>Our impact is reflected in the organizations and communities we are privileged to support. Through purposeful partnerships, the AH Foundation helps extend the reach of programs that serve people, create opportunity, and strengthen communities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- METRICS -->
+  <section class="section section-forest">
+    <div class="container">
+      <div class="section-head centered" data-reveal>
+        <span class="eyebrow mx-auto">Impact Metrics</span>
+        <h2>{{ impact.metrics_heading }}</h2>
+      </div>
+      <div class="metrics-grid" data-reveal-stagger>
+        {%- for m in impact.metrics %}
+        <div class="metric-card">
+          <div class="metric-num" data-count-to="{{ m.value }}" data-count-suffix="{{ m.suffix }}">0</div>
+          <div class="metric-label">{{ m.label }}</div>
+        </div>
+        {%- endfor %}
+      </div>
+      {%- if impact.metrics_note %}
+      <p class="text-center" style="margin-top:32px; font-size:13px; color:rgba(255,255,255,0.5);">{{ impact.metrics_note }}</p>
+      {%- endif %}
+    </div>
+  </section>
+
+  <!-- FEATURED IMPACT STORY -->
+  <section class="section section-cream" id="jamaica-outreach">
+    <div class="container">
+      <div class="split" data-reveal>
+        <div class="split-media">
+          {%- if impact.featured_story.photos and impact.featured_story.photos.length %}
+          {% set photos = impact.featured_story.photos %}{% set slideshowLabel = "Featured story photos" %}{% include "partials/slideshow.njk" %}
+          {%- else %}
+          <svg viewBox="0 0 500 420" role="img" aria-label="Illustration representing community outreach in Montego Bay and Westmoreland, Jamaica">
+            <rect width="500" height="420" rx="28" fill="#16442f"/>
+            <circle cx="400" cy="70" r="56" fill="#e8cd8a" opacity="0.9"/>
+            <path d="M0,260 Q125,210 250,245 T500,235 V420 H0Z" fill="#123526"/>
+            <path d="M0,310 Q125,275 250,300 T500,290 V420 H0Z" fill="#0c2018"/>
+            <g transform="translate(90,420)">
+              <path d="M0,0 V-140" stroke="#5d3a1a" stroke-width="8"/>
+              <path d="M0,-140 C-50,-160 -70,-120 -100,-130 C-70,-90 -30,-100 0,-120Z" fill="#2c7f4b"/>
+              <path d="M0,-140 C50,-165 75,-125 105,-135 C75,-95 35,-105 0,-120Z" fill="#22693f"/>
+              <path d="M0,-150 C-10,-190 20,-210 0,-230 C-20,-210 10,-190 0,-150Z" fill="#1c5638"/>
+            </g>
+            <g fill="#f5efe0" opacity="0.95">
+              <circle cx="230" cy="330" r="20"/>
+              <circle cx="270" cy="340" r="16"/>
+              <circle cx="310" cy="325" r="18"/>
+              <circle cx="350" cy="345" r="14"/>
+            </g>
+          </svg>
+          {%- endif %}
+        </div>
+        <div class="split-copy">
+          <span class="eyebrow">{{ impact.featured_story.eyebrow }}</span>
+          <h2>{{ impact.featured_story.title }}</h2>
+          <p>{{ impact.featured_story.intro }}</p>
+          {%- if impact.featured_story.highlights.length %}
+          <p><strong>{{ impact.featured_story.highlights_label }}</strong></p>
+          <ul class="process-copy" style="margin-top:14px; display:flex; flex-direction:column; gap:10px;">
+            {%- for item in impact.featured_story.highlights %}
+            <li style="display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--ink-700);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:18px;height:18px;color:var(--forest-600);flex-shrink:0;margin-top:2px;"><path d="M4 12l5 5L20 6"/></svg>
+              {{ item }}
+            </li>
+            {%- endfor %}
+          </ul>
+          {%- endif %}
+          <p style="margin-top:20px;">{{ impact.featured_story.closing }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MORE STORIES -->
+  <section class="section section-tint">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">{{ impact.more_stories.eyebrow }}</span>
+        <h2>{{ impact.more_stories.heading }}</h2>
+        <p>{{ impact.more_stories.intro }}</p>
+      </div>
+      <div class="story-grid" data-reveal-stagger>
+        {%- for story in stories.stories %}{% if story.show_on_impact %}
+        {% include "partials/story-card.njk" %}
+        {%- endif %}{% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="closing-band">
+    <div class="container" data-reveal>
+      <h2>Impact Grows Where Partnership Leads.</h2>
+      <p>See the organizations behind these stories, or learn how the Foundation builds new partnerships.</p>
+      <div class="hero-actions">
+        <a href="partners.html" class="btn btn-gold">Meet Our Partners
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="approach.html" class="btn btn-outline">Our Partnership Approach</a>
+      </div>
+    </div>
+  </section>

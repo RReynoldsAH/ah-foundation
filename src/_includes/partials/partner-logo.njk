@@ -1,0 +1,6 @@
+{#- Partner logo/photo, or text initials when no image is uploaded. Expects a `partner` variable. -#}
+{%- if partner.logo -%}
+<span class="partner-logo has-image"><img src="{{ partner.logo | asset }}" alt="{{ partner.name }} logo" loading="lazy"></span>
+{%- else -%}
+<span class="partner-logo">{{ partner.name | initials }}</span>
+{%- endif -%}

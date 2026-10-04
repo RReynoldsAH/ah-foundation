@@ -1,0 +1,229 @@
+---
+layout: layouts/base.njk
+tags: pages
+priority: "1.0"
+changefreq: monthly
+title: "AH Foundation | Sowing Into Communities, Strengthening Those Who Serve"
+description: "The AH Foundation partners with faith-based and nonprofit organizations creating meaningful change through service, compassion, and stewardship. Discover our partnership approach."
+keywords: "AH Foundation, faith-based nonprofit partnership, community investment, INTEGRITY, charitable foundation, nonprofit partners"
+ogDescription: "Partnering with faith-based and nonprofit organizations to strengthen communities through purposeful, relationship-driven investment."
+isHome: true
+---
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-pattern" aria-hidden="true"></div>
+    <svg class="hero-blob b1" viewBox="0 0 600 600" aria-hidden="true"><path fill="#2C7F4B" d="M451,320Q440,390,370,420Q300,450,235,415Q170,380,140,310Q110,240,160,180Q210,120,290,110Q370,100,420,160Q470,220,451,320Z"/></svg>
+    <svg class="hero-blob b2" viewBox="0 0 600 600" aria-hidden="true"><path fill="#C99A2E" d="M441,300Q430,380,350,410Q270,440,210,390Q150,340,150,270Q150,200,210,160Q270,120,340,140Q410,160,430,220Q450,260,441,300Z"/></svg>
+
+    <div class="container">
+      <div class="hero-grid">
+        <div data-reveal>
+          <span class="hero-eyebrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0112 6a5.5 5.5 0 019.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg>
+            {{ home.hero.eyebrow }}
+          </span>
+          <h1>{{ home.hero.headline | emph | safe }}</h1>
+          <p class="hero-sub">{{ home.hero.subtext }}</p>
+          <div class="hero-actions">
+            <a href="impact.html" class="btn btn-gold">{{ home.hero.primary_cta_label }}
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
+            </a>
+            <a href="approach.html" class="btn btn-outline">{{ home.hero.secondary_cta_label }}</a>
+          </div>
+          <div class="hero-stats">
+            {%- for stat in home.hero.stats %}
+            <div>
+              <div class="hero-stat-num" data-count-to="{{ stat.value }}" data-count-suffix="{{ stat.suffix }}">0</div>
+              <div class="hero-stat-label">{{ stat.label | breakLast | safe }}</div>
+            </div>
+            {%- endfor %}
+          </div>
+        </div>
+
+        <div class="hero-art" data-reveal>
+          <svg viewBox="0 0 460 460" aria-hidden="true">
+            <defs>
+              <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#1c5638"/>
+                <stop offset="1" stop-color="#0c2018"/>
+              </linearGradient>
+              <linearGradient id="sunGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#E8CD8A"/>
+                <stop offset="1" stop-color="#C99A2E"/>
+              </linearGradient>
+            </defs>
+            <circle cx="230" cy="230" r="210" fill="url(#skyGrad)"/>
+            <circle class="hero-sun" cx="230" cy="150" r="62" fill="url(#sunGrad)" opacity="0.9"/>
+            <g class="sun-rays" stroke="#E8CD8A" stroke-width="2" opacity="0.5">
+              <line x1="230" y1="58" x2="230" y2="80"/>
+              <line x1="230" y1="220" x2="230" y2="242"/>
+              <line x1="138" y1="150" x2="160" y2="150"/>
+              <line x1="300" y1="150" x2="322" y2="150"/>
+              <line x1="163" y1="83" x2="178" y2="98"/>
+              <line x1="297" y1="83" x2="282" y2="98"/>
+              <line x1="163" y1="217" x2="178" y2="202"/>
+              <line x1="297" y1="217" x2="282" y2="202"/>
+            </g>
+            <path d="M0,300 Q115,255 230,290 T460,285 V460 H0 Z" fill="#16442f"/>
+            <path d="M0,340 Q115,300 230,330 T460,320 V460 H0 Z" fill="#123526"/>
+            <path d="M0,385 Q115,350 230,375 T460,365 V460 H0 Z" fill="#0c2018"/>
+            <g transform="translate(230,300)">
+              <path class="hero-stem" d="M0,120 V10" stroke="#D9B45A" stroke-width="5" stroke-linecap="round"/>
+              <path class="hero-leaf" style="animation-delay:-1.2s" d="M0,55 C-46,45 -60,0 -46,-38 C-8,-30 8,10 0,55Z" fill="#2c7f4b"/>
+              <path class="hero-leaf" style="animation-delay:-3s" d="M0,25 C40,10 56,-32 44,-66 C10,-56 -8,-14 0,25Z" fill="#22693f"/>
+              <path class="hero-leaf" style="animation-delay:-0.4s" d="M0,-2 C-26,-16 -30,-46 -18,-68 C6,-58 16,-28 0,-2Z" fill="#c99a2e"/>
+              <ellipse cx="0" cy="128" rx="66" ry="12" fill="#000" opacity="0.18"/>
+            </g>
+            <g fill="#E8CD8A">
+              <circle class="hero-mote" style="animation-delay:0s" cx="90" cy="110" r="2.4"/>
+              <circle class="hero-mote" style="animation-delay:-0.6s" cx="360" cy="95" r="2"/>
+              <circle class="hero-mote" style="animation-delay:-1.4s" cx="110" cy="180" r="1.8"/>
+              <circle class="hero-mote" style="animation-delay:-2.1s" cx="340" cy="200" r="2.4"/>
+              <circle class="hero-mote" style="animation-delay:-0.9s" cx="60" cy="230" r="2"/>
+              <circle class="hero-mote" style="animation-delay:-2.6s" cx="400" cy="250" r="1.8"/>
+            </g>
+          </svg>
+          <div class="hero-badge">
+            <span class="icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15l6-6"/><path d="M8 17l-2.5 2.5a3.5 3.5 0 01-5-5L3 12"/><path d="M16 7l2.5-2.5a3.5 3.5 0 015 5L21 12"/></svg>
+            </span>
+            <span><strong>{{ home.hero.badge_title }}</strong><span>{{ home.hero.badge_text }}</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-particles" aria-hidden="true">
+      <span class="hero-particle" style="left:8%; animation-duration:9s; animation-delay:-1s;"></span>
+      <span class="hero-particle" style="left:22%; width:3px; height:3px; animation-duration:12s; animation-delay:-4s;"></span>
+      <span class="hero-particle" style="left:38%; animation-duration:10s; animation-delay:-7s;"></span>
+      <span class="hero-particle" style="left:55%; width:4px; height:4px; animation-duration:14s; animation-delay:-2s;"></span>
+      <span class="hero-particle" style="left:68%; animation-duration:11s; animation-delay:-9s;"></span>
+      <span class="hero-particle" style="left:82%; width:3px; height:3px; animation-duration:13s; animation-delay:-5s;"></span>
+      <span class="hero-particle" style="left:92%; animation-duration:9.5s; animation-delay:-3s;"></span>
+    </div>
+
+    <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
+  </section>
+
+  <!-- BUSINESS SUCCESS / COMMUNITY IMPACT -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="split" data-reveal>
+        <div class="split-copy">
+          <span class="eyebrow">{{ home.why.eyebrow }}</span>
+          <h2>{{ home.why.heading }}</h2>
+          {%- for para in home.why.paragraphs %}
+          <p>{{ para }}</p>
+          {%- endfor %}
+          <div class="hero-actions" style="margin-top:30px;">
+            <a href="about.html" class="btn btn-outline-dark">{{ home.why.button_label }}
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="split-media">
+          {% set photos = home.why.photos %}{% set slideshowLabel = "Mission trip photos" %}{% include "partials/slideshow.njk" %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT GUIDES US -->
+  <section class="section section-tint">
+    <div class="container">
+      <div class="section-head centered" data-reveal>
+        <span class="eyebrow mx-auto">{{ home.values.eyebrow }}</span>
+        <h2>{{ home.values.heading }}</h2>
+        <p>{{ home.values.intro }}</p>
+      </div>
+      <div class="pillars-grid" data-reveal-stagger>
+        {%- for item in home.values.items %}
+        <div class="pillar-card">
+          <span class="pillar-index">{{ loop.index | pad2 }}</span>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.text }}</p>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT IN ACTION -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">{{ home.stories_section.eyebrow }}</span>
+        <h2>{{ home.stories_section.heading }}</h2>
+        <p>{{ home.stories_section.intro }}</p>
+      </div>
+      <div class="story-grid" data-reveal-stagger>
+        {%- for story in stories.stories %}{% if story.show_on_home %}
+        {% include "partials/story-card.njk" %}
+        {%- endif %}{% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PARTNERS -->
+  <section class="section section-tint">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">{{ home.partners_section.eyebrow }}</span>
+        <h2>{{ home.partners_section.heading }}</h2>
+        <p>{{ home.partners_section.intro }}</p>
+      </div>
+      <div class="partner-grid" data-reveal-stagger>
+        {%- for partner in partners.partners %}{% if partner.featured %}
+        <div class="partner-card">
+          <div class="partner-top">
+            {% include "partials/partner-logo.njk" %}
+            <div>
+              <div class="partner-name">{{ partner.name }}</div>
+              <div class="partner-loc">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-7.5 7-12a7 7 0 10-14 0c0 4.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                {{ partner.location }}
+              </div>
+            </div>
+          </div>
+          <span class="partner-focus">{{ partner.categories[0] | categoryLabel }}</span>
+          <p class="desc">{{ partner.brief_overview or partner.mission }}</p>
+          <a href="partners.html" class="story-link">View partner profile
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        {%- endif %}{% endfor %}
+        {%- if home.partners_section.show_more_card %}
+
+        <div class="partner-card">
+          <div class="partner-top">
+            <span class="partner-logo">+</span>
+            <div>
+              <div class="partner-name">More Partners Coming Soon</div>
+              <div class="partner-loc">Nationwide &amp; International</div>
+            </div>
+          </div>
+          <span class="partner-focus">Growing Directory</span>
+          <p class="desc">The AH Foundation's partner directory is actively growing. Visit Our Partners for the complete, current list.</p>
+          <a href="partners.html" class="story-link">View all partners
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        {%- endif %}
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing-band">
+    <div class="container" data-reveal>
+      <h2>{{ home.closing.heading }}</h2>
+      <p>{{ home.closing.text }}</p>
+      <div class="hero-actions">
+        <a href="approach.html" class="btn btn-gold">Our Partnership Approach
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="contact.html" class="btn btn-outline">Contact the Foundation</a>
+      </div>
+    </div>
+  </section>

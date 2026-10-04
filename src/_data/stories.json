@@ -1,0 +1,44 @@
+{
+  "stories": [
+    {
+      "title": "Faith in Action: Jamaica Outreach",
+      "tag": "International Missions",
+      "summary": "Alongside Fresh Bread Ministries and Refuge of Hope, the Foundation supported outreach across Montego Bay and Westmoreland.",
+      "theme": "jamaica",
+      "image": "",
+      "link": "impact.html#jamaica-outreach",
+      "show_on_home": true,
+      "show_on_impact": false
+    },
+    {
+      "title": "Investing in the Next Generation",
+      "tag": "Youth Development",
+      "summary": "Supporting partner organizations that mentor and equip young people to grow into strong community leaders.",
+      "theme": "youth",
+      "image": "",
+      "link": "",
+      "show_on_home": true,
+      "show_on_impact": true
+    },
+    {
+      "title": "Strengthening Families, Strengthening Communities",
+      "tag": "Family Support",
+      "summary": "Partnering with organizations that walk alongside families to build stability, hope, and long-term opportunity.",
+      "theme": "family",
+      "image": "",
+      "link": "",
+      "show_on_home": true,
+      "show_on_impact": true
+    },
+    {
+      "title": "Building Skills, Building Futures",
+      "tag": "Workforce Development",
+      "summary": "Helping partner organizations equip individuals with the skills and support needed for lasting opportunity.",
+      "theme": "workforce",
+      "image": "",
+      "link": "",
+      "show_on_home": false,
+      "show_on_impact": true
+    }
+  ]
+}

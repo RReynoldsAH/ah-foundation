@@ -1,0 +1,165 @@
+---
+layout: layouts/base.njk
+tags: pages
+priority: "0.8"
+changefreq: monthly
+title: "About the Foundation | AH Foundation"
+description: "Learn the story behind the AH Foundation — established by INTEGRITY to invest in communities through faith, service, stewardship, and partnership."
+keywords: "AH Foundation story, mission, vision, INTEGRITY foundation, Antoninus Hines, faith-based giving"
+ogDescription: "For nearly 30 years, INTEGRITY has built its business around service. The AH Foundation extends that commitment to service beyond the workplace."
+permalink: "about.html"
+breadcrumbName: "About"
+---
+  <section class="page-hero">
+    <div class="hero-bg-pattern" aria-hidden="true"></div>
+    <div class="container">
+      <div class="page-hero-inner">
+        <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>About</span></div>
+        <span class="hero-eyebrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0112 6a5.5 5.5 0 019.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg>
+          About the Foundation
+        </span>
+        <h1>Sowing Into the Communities Where We Do Business.</h1>
+        <p>The AH Foundation exists to strengthen communities by supporting faith-based and nonprofit organizations that are creating meaningful impact through service, compassion, leadership, and stewardship.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="split" data-reveal>
+        <div class="split-copy">
+          <span class="eyebrow">Our Story</span>
+          <h2>A Commitment to Service, Beyond the Workplace</h2>
+          <p>For nearly 30 years, INTEGRITY has built its business around service by providing professional facility solutions that support clean, safe, and sustainable environments.</p>
+          <p>The AH Foundation extends that commitment to service beyond the workplace. Established by INTEGRITY owner Antoninus Hines, the Foundation was created to intentionally invest in the communities where relationships are built and business is conducted.</p>
+          <p>Rather than simply giving, the Foundation seeks to build meaningful relationships with organizations that understand their communities and are already doing important work.</p>
+        </div>
+        <div class="split-media">
+          {% set photos = about.story_photos %}{% set slideshowLabel = "Mission trip photos" %}{% include "partials/slideshow.njk" %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CEO QUOTE -->
+  <section class="section section-forest">
+    <div class="container">
+      <div class="ceo-quote" data-reveal>
+        {%- if about.ceo.photo %}
+        <span class="ceo-photo">
+          <img src="{{ about.ceo.photo | asset }}" width="260" height="260" alt="{{ about.ceo.photo_alt }}" loading="lazy">
+        </span>
+        {%- endif %}
+        <span class="eyebrow mx-auto">{{ about.ceo.eyebrow }}</span>
+        <blockquote>
+          "{{ about.ceo.quote }}"
+        </blockquote>
+        <cite>
+          <span class="quote-rule" aria-hidden="true"></span>
+          <span class="name">{{ about.ceo.name }}</span>
+          <span class="title">{{ about.ceo.title }}</span>
+        </cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION / VISION -->
+  <section class="section section-tint">
+    <div class="container">
+      <div class="pillars-grid" data-reveal-stagger style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));">
+        <div class="pillar-card">
+          <span class="pillar-index">01</span>
+          <h3>Our Mission</h3>
+          <p>To strengthen communities by investing in faith-based and nonprofit organizations that serve people, create opportunity, and make a lasting difference.</p>
+        </div>
+        <div class="pillar-card">
+          <span class="pillar-index">02</span>
+          <h3>Our Vision</h3>
+          <p>To see thriving communities strengthened through faith, service, stewardship, and partnership.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR APPROACH -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="section-head centered" data-reveal>
+        <span class="eyebrow mx-auto">Our Approach</span>
+        <h2>How We Invest in Lasting Change</h2>
+        <p>A simple framework that guides how the Foundation identifies, partners with, and supports organizations doing meaningful work.</p>
+      </div>
+      <div class="pillars-grid" data-reveal-stagger>
+        <div class="pillar-card">
+          <span class="pillar-index">01</span>
+          <h3>Identify</h3>
+          <p>Identify organizations doing meaningful work.</p>
+        </div>
+        <div class="pillar-card">
+          <span class="pillar-index">02</span>
+          <h3>Partner</h3>
+          <p>Develop relationships with organizational leadership.</p>
+        </div>
+        <div class="pillar-card">
+          <span class="pillar-index">03</span>
+          <h3>Invest</h3>
+          <p>Provide financial and other support where appropriate.</p>
+        </div>
+        <div class="pillar-card">
+          <span class="pillar-index">04</span>
+          <h3>Engage</h3>
+          <p>Remain connected to understand and maximize community impact.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY PARTNERSHIP MATTERS -->
+  <section class="section section-forest">
+    <div class="container">
+      <div class="split reverse" data-reveal>
+        <div class="split-media">
+          <svg viewBox="0 0 500 380" role="img" aria-label="Illustration representing partnership and connection">
+            <rect width="500" height="380" rx="28" fill="#0c2018"/>
+            <g stroke="#2c7f4b" stroke-width="1" opacity="0.5">
+              <line x1="150" y1="190" x2="350" y2="130"/>
+              <line x1="150" y1="190" x2="350" y2="250"/>
+              <line x1="150" y1="190" x2="230" y2="90"/>
+              <line x1="350" y1="130" x2="350" y2="250"/>
+            </g>
+            <circle cx="150" cy="190" r="34" fill="#c99a2e"/>
+            <circle cx="350" cy="130" r="24" fill="#e8cd8a"/>
+            <circle cx="350" cy="250" r="24" fill="#e8cd8a"/>
+            <circle cx="230" cy="90" r="18" fill="#2c7f4b"/>
+          </svg>
+        </div>
+        <div class="split-copy">
+          <span class="eyebrow">Why Partnership Matters</span>
+          <h2>Lasting Impact Comes Through Relationships</h2>
+          <p>Many organizations provide funding. We believe lasting impact comes through relationships.</p>
+          <p>The AH Foundation seeks to know leaders personally, understand the communities they serve, and remain engaged long after funding is provided. Our goal is not simply to fund programs but to build partnerships that strengthen communities for years to come.</p>
+          <div class="hero-actions" style="margin-top:30px;">
+            <a href="approach.html" class="btn btn-gold">Our Partnership Approach
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing-band">
+    <div class="container" data-reveal>
+      <h2>Business Success Creates an Opportunity — and a Responsibility.</h2>
+      <p>Explore the organizations we partner with and the communities they serve.</p>
+      <div class="hero-actions">
+        <a href="partners.html" class="btn btn-gold">Meet Our Partners
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="impact.html" class="btn btn-outline">See Our Impact</a>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,10 @@
+---
+permalink: /robots.txt
+eleventyExcludeFromCollections: true
+---
+{%- set siteUrl = site.url | replace(r/\/+$/, "") -%}
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+Sitemap: {{ siteUrl }}/sitemap.xml

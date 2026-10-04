@@ -1,0 +1,15 @@
+{
+  "story_photos": [
+    { "image": "/assets/img/jamaica-mission-3.jpg", "alt": "Children and families gather together during the AH Foundation's Jamaica mission outreach" },
+    { "image": "/assets/img/jamaica-mission-2.jpg", "alt": "Two young girls from the Savanna-la-Mar community smile during the AH Foundation's mission outreach" },
+    { "image": "/assets/img/jamaica-mission-1.jpg", "alt": "A boy raises his hand in worship during Vacation Bible School on the AH Foundation's Jamaica mission trip" }
+  ],
+  "ceo": {
+    "eyebrow": "A Message From Our Founder",
+    "photo": "/assets/img/antoninus-hines.avif",
+    "photo_alt": "Antoninus Hines, Founder of the AH Foundation and CEO of Integrity National Corporation",
+    "quote": "Through collaboration, resources, and faith in action, the AH Foundation and its partners were able to meet people where they are and make a meaningful impact in the community. May the work continue, the impact multiply, and the communities served be strengthened.",
+    "name": "Antoninus Hines",
+    "title": "Founder, AH Foundation & CEO, Integrity National Corporation"
+  }
+}

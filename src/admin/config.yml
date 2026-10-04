@@ -1,0 +1,282 @@
+# AH Foundation — Decap CMS configuration
+#
+# Staff edit content here; every save is a commit to the GitHub repo, which the
+# host (Netlify / GitHub Pages) rebuilds and publishes automatically.
+#
+# Local editing (no login):  npm run dev   then open http://localhost:8090/admin/
+# Production login:          GitHub account with write access to the repo, using
+#                            the OAuth provider configured in Netlify
+#                            (Site settings > Access control > OAuth).
+
+backend:
+  name: github
+  repo: shakirriyaz/ah-foundation   # change to the client's org/repo after transfer
+  branch: master
+
+# Only used when the admin is opened on localhost (needs `npm run cms` running).
+local_backend: true
+
+media_folder: src/assets/img/uploads
+public_folder: /assets/img/uploads
+
+site_url: https://www.ahfoundation.org
+locale: en
+
+collections:
+  # ---------------------------------------------------------------- PARTNERS
+  - name: partners
+    label: Partner Profiles
+    description: Organizations shown on the Our Partners page (and on the homepage when marked Featured).
+    files:
+      - name: partners
+        label: Partner Profiles
+        file: src/_data/partners.json
+        fields:
+          - label: Partners
+            name: partners
+            widget: list
+            summary: "{{fields.name}} — {{fields.location}}"
+            fields:
+              - { label: Organization Name, name: name, widget: string }
+              - { label: Location, name: location, widget: string, hint: "City, State/Region, Country" }
+              - label: Categories
+                name: categories
+                widget: select
+                multiple: true
+                # The eight categories from the developer guide. Keep in sync with src/_data/categories.json
+                options:
+                  - { label: Faith-Based Ministry, value: faith-based-ministry }
+                  - { label: Humanitarian Relief, value: humanitarian-relief }
+                  - { label: International Missions, value: international-missions }
+                  - { label: Community Outreach, value: community-outreach }
+                  - { label: Education, value: education }
+                  - { label: Youth Development, value: youth-development }
+                  - { label: Workforce Development, value: workforce-development }
+                  - { label: Family Support, value: family-support }
+                hint: "The FIRST category is shown as the card's Focus Area. All selected categories are used by the filter buttons."
+              - { label: Brief Overview (homepage card), name: brief_overview, widget: text, required: false, hint: "One or two sentences. Falls back to the Mission Summary if empty." }
+              - { label: Mission Summary, name: mission, widget: text, required: false }
+              - { label: AH Foundation Partnership Summary, name: partnership_summary, widget: text, required: false }
+              - { label: Approved Logo or Photo, name: logo, widget: image, required: false, hint: "Square or landscape logo works best. Leave empty to show the organization's initials." }
+              - { label: Website Link, name: website, widget: string, required: false, hint: "Full address, e.g. https://example.org. Leave empty to hide the link." }
+              - { label: Show on Homepage (Featured Partners), name: featured, widget: boolean, default: false }
+              - { label: Placeholder / sample profile, name: sample, widget: boolean, default: false, hint: "Turn on only for sample cards. A note for editors appears on the Partners page while any sample exists." }
+
+  # ----------------------------------------------------------------- STORIES
+  - name: stories
+    label: Impact Stories
+    description: Story cards on the homepage (Impact in Action) and the Our Impact page (More Stories).
+    files:
+      - name: stories
+        label: Impact Stories
+        file: src/_data/stories.json
+        fields:
+          - label: Stories
+            name: stories
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Headline, name: title, widget: string }
+              - { label: Category Tag, name: tag, widget: string, hint: "Short label above the headline, e.g. Youth Development" }
+              - { label: One-sentence Summary, name: summary, widget: text }
+              - { label: Photo, name: image, widget: image, required: false, hint: "Optional. If empty, the matching illustration below is used." }
+              - label: Illustration (used when there is no photo)
+                name: theme
+                widget: select
+                default: jamaica
+                options:
+                  - { label: Community outreach, value: jamaica }
+                  - { label: Youth development, value: youth }
+                  - { label: Family support, value: family }
+                  - { label: Workforce development, value: workforce }
+              - { label: Link to Full Story, name: link, widget: string, required: false, hint: "e.g. impact.html#jamaica-outreach or a full https:// address. Leave empty to show 'Story coming soon'." }
+              - { label: Show on Homepage, name: show_on_home, widget: boolean, default: false, hint: "The developer guide recommends 2-3 stories on the homepage." }
+              - { label: Show in 'More Stories' on Our Impact page, name: show_on_impact, widget: boolean, default: true, hint: "Turn off for the story that is already the Featured Impact Story." }
+
+  # ------------------------------------------------------------------ IMPACT
+  - name: impact
+    label: Impact Metrics & Featured Story
+    description: Numbers and the featured story on the Our Impact page.
+    files:
+      - name: impact
+        label: Our Impact Page
+        file: src/_data/impact.json
+        fields:
+          - { label: Metrics Section Heading, name: metrics_heading, widget: string }
+          - label: Impact Metrics
+            name: metrics
+            widget: list
+            summary: "{{fields.value}}{{fields.suffix}} {{fields.label}}"
+            hint: "Use verified data only. Numbers count up when the visitor scrolls to them."
+            fields:
+              - { label: Number, name: value, widget: number, value_type: int, min: 0 }
+              - { label: Suffix, name: suffix, widget: string, required: false, hint: "Optional, e.g. + for '150+'" }
+              - { label: Label, name: label, widget: string }
+          - { label: Footnote under metrics, name: metrics_note, widget: text, required: false, hint: "Leave EMPTY once the numbers are verified, to remove the placeholder notice." }
+          - label: Featured Impact Story
+            name: featured_story
+            widget: object
+            fields:
+              - { label: Small Heading, name: eyebrow, widget: string }
+              - { label: Headline, name: title, widget: string }
+              - { label: Introduction, name: intro, widget: text }
+              - { label: Highlights Label, name: highlights_label, widget: string }
+              - { label: Highlights, name: highlights, widget: list, field: { label: Highlight, name: highlight, widget: string } }
+              - { label: Closing Statement, name: closing, widget: text }
+              - label: Photos (slideshow)
+                name: photos
+                widget: list
+                required: false
+                hint: "Optional. If empty, an illustration is shown instead."
+                summary: "{{fields.alt}}"
+                fields:
+                  - { label: Photo, name: image, widget: image }
+                  - { label: Description (for screen readers), name: alt, widget: string }
+          - label: More Stories Section
+            name: more_stories
+            widget: object
+            fields:
+              - { label: Small Heading, name: eyebrow, widget: string }
+              - { label: Heading, name: heading, widget: string }
+              - { label: Intro, name: intro, widget: text }
+
+  # --------------------------------------------------------------- HOMEPAGE
+  - name: homepage
+    label: Homepage Content
+    description: Hero, "Business Success. Community Impact.", values, section headings, and the closing statement.
+    files:
+      - name: home
+        label: Homepage
+        file: src/_data/home.json
+        fields:
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Small Heading above Headline, name: eyebrow, widget: string }
+              - { label: Headline, name: headline, widget: string, hint: "Wrap ONE word in *asterisks* to make it gold italic, e.g. Sowing Into Communities. *Strengthening* Those Who Serve." }
+              - { label: Supporting Copy, name: subtext, widget: text }
+              - { label: Main Button Label (goes to Our Impact), name: primary_cta_label, widget: string }
+              - { label: Second Button Label (goes to Partnership Approach), name: secondary_cta_label, widget: string }
+              - label: Headline Numbers
+                name: stats
+                widget: list
+                summary: "{{fields.value}}{{fields.suffix}} {{fields.label}}"
+                min: 1
+                max: 4
+                fields:
+                  - { label: Number, name: value, widget: number, value_type: int, min: 0 }
+                  - { label: Suffix, name: suffix, widget: string, required: false }
+                  - { label: Label, name: label, widget: string }
+              - { label: Floating Badge Title, name: badge_title, widget: string }
+              - { label: Floating Badge Text, name: badge_text, widget: string }
+          - label: Business Success. Community Impact. (section)
+            name: why
+            widget: object
+            fields:
+              - { label: Small Heading, name: eyebrow, widget: string }
+              - { label: Heading, name: heading, widget: string }
+              - { label: Paragraphs, name: paragraphs, widget: list, field: { label: Paragraph, name: paragraph, widget: text } }
+              - { label: Button Label (goes to About), name: button_label, widget: string }
+              - label: Photo Slideshow
+                name: photos
+                widget: list
+                summary: "{{fields.alt}}"
+                hint: "Photos rotate every 5 seconds, in this order."
+                fields:
+                  - { label: Photo, name: image, widget: image }
+                  - { label: Description (for screen readers), name: alt, widget: string }
+          - label: What Guides Us (values)
+            name: values
+            widget: object
+            fields:
+              - { label: Small Heading, name: eyebrow, widget: string }
+              - { label: Heading, name: heading, widget: string }
+              - { label: Intro, name: intro, widget: text }
+              - label: Values
+                name: items
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: text, widget: text }
+          - label: Impact in Action (section heading)
+            name: stories_section
+            widget: object
+            fields:
+              - { label: Small Heading, name: eyebrow, widget: string }
+              - { label: Heading, name: heading, widget: string }
+              - { label: Intro, name: intro, widget: text }
+          - label: Featured Partners (section heading)
+            name: partners_section
+            widget: object
+            fields:
+              - { label: Small Heading, name: eyebrow, widget: string }
+              - { label: Heading, name: heading, widget: string }
+              - { label: Intro, name: intro, widget: text }
+              - { label: Show the "More Partners Coming Soon" card, name: show_more_card, widget: boolean, default: true }
+          - label: Closing Statement
+            name: closing
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - { label: Text, name: text, widget: text }
+
+  # ---------------------------------------------------------------- CONTACT
+  - name: contact
+    label: Contact Information & Site Settings
+    description: Email, address, partnership contact, social links, footer text and the website address.
+    files:
+      - name: site
+        label: Contact Information & Site Settings
+        file: src/_data/site.json
+        fields:
+          - label: Contact Information
+            name: contact
+            widget: object
+            fields:
+              - { label: General Email, name: general_email, widget: string, required: false, hint: "Leave empty to show 'To Be Confirmed' on the Contact page." }
+              - { label: Mailing Address, name: mailing_address, widget: text, required: false, hint: "Press Enter for a new line. Leave empty to show 'To Be Confirmed'." }
+              - { label: Partnership Inquiries — Name, name: partnership_contact_name, widget: string }
+              - { label: Partnership Inquiries — Title, name: partnership_contact_title, widget: string }
+          - label: Social Media Links
+            name: social
+            widget: object
+            hint: "Full addresses (https://...). An icon appears in the footer only when a link is filled in."
+            fields:
+              - { label: Facebook, name: facebook, widget: string, required: false }
+              - { label: Instagram, name: instagram, widget: string, required: false }
+              - { label: LinkedIn, name: linkedin, widget: string, required: false }
+          - { label: Footer Description, name: footer_blurb, widget: text }
+          - { label: Copyright Line, name: copyright, widget: string }
+          - { label: Footer Credit Line, name: footer_credit, widget: string, required: false, hint: "Leave empty to hide." }
+          - { label: Organization Name, name: name, widget: string }
+          - { label: Tagline under the logo, name: tagline, widget: string }
+          - { label: Website Address, name: url, widget: string, hint: "The final public address, no trailing slash, e.g. https://www.ahfoundation.org. Used for Google and social-sharing links." }
+
+  # ------------------------------------------------------------------ ABOUT
+  - name: about
+    label: About Page (Photos & Founder Message)
+    description: The photo slideshow in Our Story and the founder message.
+    files:
+      - name: about
+        label: About Page
+        file: src/_data/about.json
+        fields:
+          - label: Our Story Photo Slideshow
+            name: story_photos
+            widget: list
+            summary: "{{fields.alt}}"
+            fields:
+              - { label: Photo, name: image, widget: image }
+              - { label: Description (for screen readers), name: alt, widget: string }
+          - label: Founder Message
+            name: ceo
+            widget: object
+            fields:
+              - { label: Small Heading, name: eyebrow, widget: string }
+              - { label: Photo, name: photo, widget: image, required: false }
+              - { label: Photo Description (for screen readers), name: photo_alt, widget: string, required: false }
+              - { label: Quote, name: quote, widget: text }
+              - { label: Name, name: name, widget: string }
+              - { label: Title, name: title, widget: string }

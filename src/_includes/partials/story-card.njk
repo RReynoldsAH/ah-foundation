@@ -1,0 +1,24 @@
+{#- Renders one story card. Expects a `story` variable. -#}
+<article class="story-card">
+  <div class="story-media">
+    {%- if story.image %}
+    <img src="{{ story.image | asset }}" alt="{{ story.title }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+    {%- elif story.theme == "youth" %}{% include "story-art/youth.njk" %}
+    {%- elif story.theme == "family" %}{% include "story-art/family.njk" %}
+    {%- elif story.theme == "workforce" %}{% include "story-art/workforce.njk" %}
+    {%- else %}{% include "story-art/jamaica.njk" %}
+    {%- endif %}
+  </div>
+  <div class="story-body">
+    <span class="story-tag">{{ story.tag }}</span>
+    <h3>{{ story.title }}</h3>
+    <p>{{ story.summary }}</p>
+    {%- if story.link %}
+    <a href="{{ story.link }}" class="story-link">Read the full story
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
+    </a>
+    {%- else %}
+    <span class="story-link" style="opacity:0.55;">Story coming soon</span>
+    {%- endif %}
+  </div>
+</article>
