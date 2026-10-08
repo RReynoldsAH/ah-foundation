@@ -26,6 +26,7 @@
 
   --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-brand: "Poppins", var(--font-body);
 
   --container-w: 1200px;
   --radius-sm: 8px;
@@ -159,12 +160,33 @@ section { position: relative; }
   box-shadow: 0 2px 20px rgba(12,32,24,0.08);
   padding: 12px 0;
 }
-.brand { display: flex; align-items: center; gap: 12px; }
-.brand-mark { width: 42px; height: 42px; flex-shrink: 0; }
-.brand-text { font-family: var(--font-display); font-weight: 600; font-size: 19px; letter-spacing: 0.01em; color: var(--white); transition: color var(--dur-md); }
-.brand-text span { display: block; font-family: var(--font-body); font-size: 10px; letter-spacing: 0.18em; font-weight: 600; color: var(--gold-300); text-transform: uppercase; }
-.site-header.is-scrolled .brand-text { color: var(--forest-950); }
-.site-header.is-scrolled .brand-text span { color: var(--gold-600); }
+/* Logo: traced "AH" monogram + wordmark set in the logo's typeface (Poppins) */
+.brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.site-header .brand-text { white-space: nowrap; }
+@media (max-width: 359px) {
+  .site-header .brand-mark { height: 42px; }
+  .site-header .brand-text { font-size: 10px; letter-spacing: 0.14em; }
+}
+.brand-mark { display: block; height: 52px; width: auto; flex-shrink: 0; }
+.brand-mark--on-light { display: none; }
+.site-header.is-scrolled .brand-mark--on-dark { display: none; }
+.site-header.is-scrolled .brand-mark--on-light { display: block; }
+.brand-text {
+  font-family: var(--font-brand);
+  font-weight: 600;
+  font-size: 11.5px;
+  line-height: 1.5;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--white);
+  transition: color var(--dur-md);
+}
+.site-header.is-scrolled .brand-text { color: var(--ink-900); }
+
+/* Stacked version (footer), mirrors the official logo layout */
+.brand--stacked { flex-direction: column; align-items: center; gap: 14px; text-align: center; }
+.brand--stacked .brand-mark { height: 76px; }
+.brand--stacked .brand-text { font-size: 10.5px; letter-spacing: 0.24em; }
 
 .main-nav { display: none; }
 .main-nav ul { display: flex; align-items: center; gap: 4px; flex-wrap: nowrap; }
@@ -200,7 +222,7 @@ section { position: relative; }
 .site-header.is-scrolled .nav-toggle { color: var(--forest-900); border-color: var(--forest-300, #cfe0d3); }
 .nav-toggle svg { width: 20px; height: 20px; }
 
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
   .main-nav { display: block; }
   .header-cta { display: inline-flex; }
   .nav-toggle { display: none; }
@@ -777,6 +799,7 @@ body.nav-open { overflow: hidden; }
 /* ---------- Footer ---------- */
 .site-footer { background: var(--forest-950); color: rgba(255,255,255,0.75); padding: 72px 0 28px; }
 .footer-grid { display: grid; gap: 44px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.footer-brand .brand { display: inline-flex; }
 .footer-brand .brand-text { color: var(--white); }
 .footer-brand p { margin-top: 18px; font-size: 14px; line-height: 1.7; max-width: 280px; color: rgba(255,255,255,0.6); }
 .footer-col h4 { color: var(--white); font-family: var(--font-body); font-size: 13.5px; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 18px; }
