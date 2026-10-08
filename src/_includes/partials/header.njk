@@ -1,15 +1,10 @@
 {%- set cta = headerCta or { href: "approach.html", label: "Learn About Our Partnership Approach" } -%}
 <header class="site-header">
   <div class="container">
-    <a href="index.html" class="brand" aria-label="{{ site.name }} — home">
-      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
-        <circle cx="32" cy="32" r="32" fill="#123526"/>
-        <path d="M32 46V29" stroke="#D9B45A" stroke-width="3" stroke-linecap="round"/>
-        <path d="M32 30c0-8 6-13 14-13 0 8-6 13-14 13Z" fill="#C99A2E"/>
-        <path d="M32 34c0-7-6-11-13-11 0 7 6 11 13 11Z" fill="#E8CD8A"/>
-        <path d="M24 46h16" stroke="#D9B45A" stroke-width="3" stroke-linecap="round"/>
-      </svg>
-      <span class="brand-text">{{ site.name }}<span>{{ site.tagline }}</span></span>
+    <a href="index.html" class="brand" aria-label="{{ site.full_name }} — home">
+      <img class="brand-mark brand-mark--on-dark" src="assets/brand/ah-monogram-bold-light.svg" alt="" width="65" height="52">
+      <img class="brand-mark brand-mark--on-light" src="assets/brand/ah-monogram-bold.svg" alt="" width="65" height="52">
+      <span class="brand-text">{{ site.full_name | breakLast | safe }}</span>
     </a>
     <nav class="main-nav" aria-label="Primary">
       <ul>

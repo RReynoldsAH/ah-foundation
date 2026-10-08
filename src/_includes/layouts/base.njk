@@ -16,12 +16,21 @@
 <meta property="og:title" content="{{ title }}">
 <meta property="og:description" content="{{ ogDescription or description }}">
 <meta property="og:url" content="{{ pageUrl }}">
+<meta property="og:image" content="{{ siteUrl }}/assets/brand/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ site.full_name }} logo">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ siteUrl }}/assets/brand/og-image.png">
 
+<link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#123526">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css?v={{ buildStamp }}">
 
 <script type="application/ld+json">

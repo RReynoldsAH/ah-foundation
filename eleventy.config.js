@@ -14,6 +14,8 @@ module.exports = function (eleventyConfig) {
     "src/js": "js",
     "src/assets": "assets",
     "src/admin": "admin",
+    "src/favicon.ico": "favicon.ico",
+    "src/apple-touch-icon.png": "apple-touch-icon.png",
   });
 
   // "Sowing Into Communities. *Strengthening* Those Who Serve." -> gold italic emphasis

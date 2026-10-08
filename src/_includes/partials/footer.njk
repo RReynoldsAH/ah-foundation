@@ -2,15 +2,9 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="brand">
-          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
-            <circle cx="32" cy="32" r="32" fill="#123526"/>
-            <path d="M32 46V29" stroke="#D9B45A" stroke-width="3" stroke-linecap="round"/>
-            <path d="M32 30c0-8 6-13 14-13 0 8-6 13-14 13Z" fill="#C99A2E"/>
-            <path d="M32 34c0-7-6-11-13-11 0 7 6 11 13 11Z" fill="#E8CD8A"/>
-            <path d="M24 46h16" stroke="#D9B45A" stroke-width="3" stroke-linecap="round"/>
-          </svg>
-          <span class="brand-text">{{ site.name }}</span>
+        <a href="index.html" class="brand brand--stacked" aria-label="{{ site.full_name }} — home">
+          <img class="brand-mark" src="assets/brand/ah-monogram-bold-light.svg" alt="" width="94" height="76" loading="lazy">
+          <span class="brand-text">{{ site.full_name }}</span>
         </a>
         <p>{{ site.footer_blurb }}</p>
         {%- if site.social.facebook or site.social.instagram or site.social.linkedin %}
