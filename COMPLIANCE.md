@@ -89,7 +89,7 @@ Comparing `AH_Foundation_Website_Content_Developer_Guide.docx` against what's ac
 | "Let's Connect" intro | ✅ | |
 | General Email | ⚠️ | Marked "To Be Confirmed" — real address not yet provided |
 | Partnership Inquiries: Ruby Reynolds, Director of Foundation Partner Relations & Operations | ✅ | |
-| Mailing Address | ⚠️ | Marked "To Be Confirmed" — not yet provided |
+| Mailing Address | ✅ | 1734 Elton Road, Suite 230, Silver Spring, MD 20903 (provided by client) |
 | Contact form fields: Name, Organization, Email, Phone (Optional), Inquiry Type, Message | ✅ | All 6 fields present with validation |
 | Form actually delivers submissions | ❌ | Front-end only right now — shows a success message but doesn't send email anywhere. Needs a form backend (e.g. Netlify Forms) wired in |
 
@@ -126,7 +126,7 @@ Comparing `AH_Foundation_Website_Content_Developer_Guide.docx` against what's ac
 1. **CMS** — built and tested locally (see table above); needs production deploy + editor login setup before staff can use it
 2. **Verified impact metrics** — currently placeholder numbers
 3. **Full partner roster + approved photos/logos** — only 2 of the planned set are real
-4. **General email + mailing address** — marked "To Be Confirmed"
+4. **General email** — still marked "To Be Confirmed" (mailing address now added)
 5. **Working contact form backend** — currently a front-end demo only
 6. **Google Analytics** — needs a GA4 ID
 7. **Real social media links**
