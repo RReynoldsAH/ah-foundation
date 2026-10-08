@@ -41,7 +41,7 @@ breadcrumbName: "Our Impact"
         {%- endfor %}
       </div>
       {%- if impact.metrics_note %}
-      <p class="text-center" style="margin-top:32px; font-size:13px; color:rgba(255,255,255,0.5);">{{ impact.metrics_note }}</p>
+      <p class="text-center" style="margin-top:32px; font-size:13px; color:rgba(255,255,255,0.65);">{{ impact.metrics_note }}</p>
       {%- endif %}
     </div>
   </section>
@@ -55,15 +55,15 @@ breadcrumbName: "Our Impact"
           {% set photos = impact.featured_story.photos %}{% set slideshowLabel = "Featured story photos" %}{% include "partials/slideshow.njk" %}
           {%- else %}
           <svg viewBox="0 0 500 420" role="img" aria-label="Illustration representing community outreach in Montego Bay and Westmoreland, Jamaica">
-            <rect width="500" height="420" rx="28" fill="#16442f"/>
+            <rect width="500" height="420" rx="28" fill="#1f5a40"/>
             <circle cx="400" cy="70" r="56" fill="#e8cd8a" opacity="0.9"/>
-            <path d="M0,260 Q125,210 250,245 T500,235 V420 H0Z" fill="#123526"/>
-            <path d="M0,310 Q125,275 250,300 T500,290 V420 H0Z" fill="#0c2018"/>
+            <path d="M0,260 Q125,210 250,245 T500,235 V420 H0Z" fill="#1a4a35"/>
+            <path d="M0,310 Q125,275 250,300 T500,290 V420 H0Z" fill="#133a2a"/>
             <g transform="translate(90,420)">
               <path d="M0,0 V-140" stroke="#5d3a1a" stroke-width="8"/>
-              <path d="M0,-140 C-50,-160 -70,-120 -100,-130 C-70,-90 -30,-100 0,-120Z" fill="#2c7f4b"/>
-              <path d="M0,-140 C50,-165 75,-125 105,-135 C75,-95 35,-105 0,-120Z" fill="#22693f"/>
-              <path d="M0,-150 C-10,-190 20,-210 0,-230 C-20,-210 10,-190 0,-150Z" fill="#1c5638"/>
+              <path d="M0,-140 C-50,-160 -70,-120 -100,-130 C-70,-90 -30,-100 0,-120Z" fill="#3a9160"/>
+              <path d="M0,-140 C50,-165 75,-125 105,-135 C75,-95 35,-105 0,-120Z" fill="#2b7d52"/>
+              <path d="M0,-150 C-10,-190 20,-210 0,-230 C-20,-210 10,-190 0,-150Z" fill="#246b4a"/>
             </g>
             <g fill="#f5efe0" opacity="0.95">
               <circle cx="230" cy="330" r="20"/>
