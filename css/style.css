@@ -5,16 +5,17 @@
 
 :root {
   /* Color system */
-  --forest-950: #0c2018;
-  --forest-900: #123526;
-  --forest-800: #16442f;
-  --forest-700: #1c5638;
-  --forest-600: #22693f;
-  --forest-500: #2c7f4b;
+  --forest-950: #133a2a;
+  --forest-900: #1a4a35;
+  --forest-800: #1f5a40;
+  --forest-700: #246b4a;
+  --forest-600: #2b7d52;
+  --forest-500: #3a9160;
   --gold-600: #a9791f;
   --gold-500: #c99a2e;
   --gold-400: #d9b45a;
   --gold-300: #e8cd8a;
+  --gold-200: #f1dfae;
   --cream-100: #fbf8f1;
   --cream-200: #f5efe0;
   --cream-300: #ece2c9;
@@ -34,9 +35,9 @@
   --radius-lg: 28px;
   --radius-pill: 999px;
 
-  --shadow-sm: 0 2px 8px rgba(12, 32, 24, 0.08);
-  --shadow-md: 0 8px 30px rgba(12, 32, 24, 0.12);
-  --shadow-lg: 0 20px 60px rgba(12, 32, 24, 0.18);
+  --shadow-sm: 0 2px 8px rgba(19, 58, 42, 0.08);
+  --shadow-md: 0 8px 30px rgba(19, 58, 42, 0.12);
+  --shadow-lg: 0 20px 60px rgba(19, 58, 42, 0.18);
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --dur-sm: 0.25s;
@@ -157,7 +158,7 @@ section { position: relative; }
 .site-header.is-scrolled {
   background: rgba(251, 248, 241, 0.92);
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px rgba(12,32,24,0.08);
+  box-shadow: 0 2px 20px rgba(19, 58, 42,0.08);
   padding: 12px 0;
 }
 /* Logo: traced "AH" monogram + wordmark set in the logo's typeface (Poppins) */
@@ -335,7 +336,7 @@ body.nav-open { overflow: hidden; }
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
   font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--gold-300); margin-bottom: 22px;
+  color: var(--gold-200); margin-bottom: 22px;
 }
 .hero-eyebrow svg { width: 16px; height: 16px; }
 .hero h1 {
@@ -436,7 +437,7 @@ body.nav-open { overflow: hidden; }
   border-radius: var(--radius-md);
   padding: 36px 28px 30px;
   box-shadow: var(--shadow-sm);
-  border: 1px solid rgba(22,68,47,0.06);
+  border: 1px solid rgba(31, 90, 64,0.06);
   border-top: 3px solid transparent;
   background-image: linear-gradient(var(--white), var(--white)), linear-gradient(90deg, var(--gold-400), var(--gold-600));
   background-origin: border-box;
@@ -502,7 +503,7 @@ body.nav-open { overflow: hidden; }
   position: absolute;
   left: 0; right: 0; bottom: 0;
   height: 96px;
-  background: linear-gradient(to top, rgba(12, 32, 24, 0.6), transparent);
+  background: linear-gradient(to top, rgba(19, 58, 42, 0.6), transparent);
   pointer-events: none;
   z-index: 1;
 }
@@ -552,7 +553,7 @@ body.nav-open { overflow: hidden; }
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
-  border: 1px solid rgba(22,68,47,0.06);
+  border: 1px solid rgba(31, 90, 64,0.06);
   transition: transform var(--dur-md) var(--ease-out), box-shadow var(--dur-md) var(--ease-out);
   display: flex; flex-direction: column;
 }
@@ -572,7 +573,7 @@ body.nav-open { overflow: hidden; }
 .filter-chip {
   padding: 9px 18px;
   border-radius: var(--radius-pill);
-  border: 1.5px solid rgba(22,68,47,0.15);
+  border: 1.5px solid rgba(31, 90, 64,0.15);
   background: var(--white);
   font-size: 13.5px;
   font-weight: 600;
@@ -589,7 +590,7 @@ body.nav-open { overflow: hidden; }
   border-radius: var(--radius-md);
   padding: 30px;
   box-shadow: var(--shadow-sm);
-  border: 1px solid rgba(22,68,47,0.06);
+  border: 1px solid rgba(31, 90, 64,0.06);
   transition: transform var(--dur-md) var(--ease-out), box-shadow var(--dur-md) var(--ease-out);
   display: flex; flex-direction: column; gap: 16px;
 }
@@ -659,7 +660,7 @@ body.nav-open { overflow: hidden; }
 .check-item {
   display: flex; gap: 14px; align-items: flex-start;
   background: var(--white); padding: 20px 22px; border-radius: var(--radius-sm);
-  border: 1px solid rgba(22,68,47,0.06); border-left: 3px solid var(--gold-500);
+  border: 1px solid rgba(31, 90, 64,0.06); border-left: 3px solid var(--gold-500);
   box-shadow: var(--shadow-sm);
   transition: transform var(--dur-sm) var(--ease-out), box-shadow var(--dur-sm) var(--ease-out);
 }
@@ -754,7 +755,7 @@ body.nav-open { overflow: hidden; }
 /* ---------- Contact ---------- */
 .contact-grid { display: grid; gap: 48px; }
 @media (min-width: 940px) { .contact-grid { grid-template-columns: 0.9fr 1.1fr; gap: 60px; } }
-.contact-card { background: var(--white); border-radius: var(--radius-lg); padding: 40px; box-shadow: var(--shadow-md); border: 1px solid rgba(22,68,47,0.06); }
+.contact-card { background: var(--white); border-radius: var(--radius-lg); padding: 40px; box-shadow: var(--shadow-md); border: 1px solid rgba(31, 90, 64,0.06); }
 .field { margin-bottom: 22px; }
 .field label { display: block; font-size: 13.5px; font-weight: 700; color: var(--forest-950); margin-bottom: 8px; }
 .field .req { color: var(--gold-600); }
@@ -762,7 +763,7 @@ body.nav-open { overflow: hidden; }
   width: 100%;
   padding: 13px 16px;
   border-radius: var(--radius-sm);
-  border: 1.5px solid rgba(22,68,47,0.15);
+  border: 1.5px solid rgba(31, 90, 64,0.15);
   background: var(--cream-100);
   font-family: inherit;
   font-size: 15px;
@@ -770,7 +771,7 @@ body.nav-open { overflow: hidden; }
   transition: border-color var(--dur-sm), box-shadow var(--dur-sm);
 }
 .field input:focus, .field select:focus, .field textarea:focus {
-  outline: none; border-color: var(--forest-600); box-shadow: 0 0 0 4px rgba(44,127,75,0.12);
+  outline: none; border-color: var(--forest-600); box-shadow: 0 0 0 4px rgba(58, 145, 96,0.12);
 }
 .field-row { display: grid; gap: 18px; }
 @media (min-width: 560px) { .field-row { grid-template-columns: 1fr 1fr; } }
@@ -806,7 +807,7 @@ body.nav-open { overflow: hidden; }
 .footer-col ul { display: flex; flex-direction: column; gap: 12px; }
 .footer-col a { font-size: 14.5px; color: rgba(255,255,255,0.65); transition: color var(--dur-sm); }
 .footer-col a:hover { color: var(--gold-300); }
-.footer-bottom { padding-top: 26px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; font-size: 13px; color: rgba(255,255,255,0.45); }
+.footer-bottom { padding-top: 26px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; font-size: 13px; color: rgba(255,255,255,0.62); }
 .footer-bottom .social-row a { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.7); }
 .footer-bottom .social-row a:hover { background: var(--gold-500); color: var(--forest-950); }
 
