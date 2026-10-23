@@ -51,7 +51,7 @@ The admin needs a login, which needs a small OAuth service. The simplest option 
 2. Attach the custom domain, then set **Website Address** in the admin (or `src/_data/site.json`) to the final address. That updates canonical links, social previews, `sitemap.xml` and `robots.txt`.
 3. In GitHub: *Settings > Developer settings > OAuth Apps > New OAuth App*.
    Homepage URL = the site address, Authorization callback URL = `https://api.netlify.com/auth/done`.
-4. In Netlify: *Site configuration > Access control > OAuth > Install provider > GitHub*, paste the Client ID and Secret.
+4. In Netlify: *Project configuration > Security > OAuth > Authentication Providers > Install Provider > GitHub*, paste the Client ID and Secret. (Checked against Netlify's docs in Oct 2026; the callback URL in step 3 is confirmed there too. The docs do not say whether this works on the Free plan, so test it when the site is created.)
 5. In `src/admin/config.yml` set `backend.repo` to the final `owner/repo` (and `branch` if it is not `master`).
 6. Give each editor a GitHub account and **write access** to the repository (GitHub backend requirement).
 
