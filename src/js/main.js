@@ -180,18 +180,41 @@
     });
   }
 
-  /* Contact form (static front-end demo submit) */
+  /* Contact form (submitted to Netlify Forms) */
   var form = document.querySelector("#contact-form");
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var success = document.querySelector(".form-success");
-      if (success) {
-        success.classList.add("is-visible");
-        success.setAttribute("role", "status");
-        success.scrollIntoView({ behavior: "smooth", block: "center" });
+      var failure = document.querySelector(".form-error");
+      var button = form.querySelector("button[type=submit]");
+      if (failure) failure.hidden = true;
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
       }
-      form.reset();
+      var body = new URLSearchParams(new FormData(form)).toString();
+      if (button) button.disabled = true;
+      fetch(form.getAttribute("action") || "/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body
+      }).then(function (res) {
+        if (!res.ok) throw new Error("Form submit failed: " + res.status);
+        if (success) {
+          success.classList.add("is-visible");
+          success.setAttribute("role", "status");
+          success.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+        form.reset();
+      }).catch(function () {
+        if (failure) {
+          failure.hidden = false;
+          failure.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      }).then(function () {
+        if (button) button.disabled = false;
+      });
     });
   }
 

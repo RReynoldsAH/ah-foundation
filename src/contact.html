@@ -79,11 +79,16 @@ breadcrumbName: "Contact"
         </div>
 
         <div class="contact-card" data-reveal>
+          <div class="form-error" role="alert" hidden>
+            <span>Sorry, your message could not be sent. Please try again in a moment, or email us directly.</span>
+          </div>
           <div class="form-success">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
             <span>Thank you — your message has been received. A member of our team will follow up soon.</span>
           </div>
-          <form id="contact-form" novalidate>
+          <form id="contact-form" name="contact" method="POST" action="/contact.html" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+            <input type="hidden" name="form-name" value="contact">
+            <p class="hp-field" aria-hidden="true"><label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
             <div class="field-row">
               <div class="field">
                 <label for="name">Name <span class="req">*</span></label>
@@ -121,7 +126,7 @@ breadcrumbName: "Contact"
             <button type="submit" class="btn btn-forest btn-block">Send Message
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
             </button>
-            <p class="form-note">This is a front-end demo submission. Connect this form to your CMS or form-handling service (with spam protection and SSL) before launch.</p>
+            <p class="form-note">We use the details you share only to respond to your message.</p>
           </form>
         </div>
 

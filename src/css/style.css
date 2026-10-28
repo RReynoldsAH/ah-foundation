@@ -778,6 +778,9 @@ body.nav-open { overflow: hidden; }
 .form-note { font-size: 12.5px; color: var(--ink-500); margin-top: 14px; }
 .form-success { display: none; background: var(--cream-300); border-radius: var(--radius-sm); padding: 18px 20px; margin-bottom: 22px; font-size: 14.5px; color: var(--forest-900); align-items: center; gap: 12px; }
 .form-success.is-visible { display: flex; }
+.form-error { background: #fbeaea; border-radius: var(--radius-sm); padding: 16px 20px; margin-bottom: 22px; font-size: 14.5px; color: #7a1f1f; }
+.form-error[hidden] { display: none; }
+.hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .form-success svg { width: 20px; height: 20px; color: var(--forest-700); flex-shrink: 0; }
 
 .contact-info-list { display: flex; flex-direction: column; gap: 22px; }

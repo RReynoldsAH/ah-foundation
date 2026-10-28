@@ -10,7 +10,7 @@
 
 backend:
   name: github
-  repo: shakirriyaz/ah-foundation   # change to the client's org/repo after transfer
+  repo: RReynoldsAH/ah-foundation
   branch: master
 
 # Only used when the admin is opened on localhost (needs `npm run cms` running).
