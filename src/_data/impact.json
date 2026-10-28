@@ -21,7 +21,12 @@
       "Prayer, encouragement, and faith-centered outreach"
     ],
     "closing": "This is what meaningful partnership looks like: organizations coming together to serve people and strengthen communities.",
-    "photos": []
+    "photos": [
+      { "image": "/assets/img/jamaica-outreach-1.jpg", "alt": "Children laugh and play together on a playground during the AH Foundation's Jamaica outreach, in black and white" },
+      { "image": "/assets/img/jamaica-outreach-2.jpg", "alt": "Four children smile and gather around a tire swing during the AH Foundation's Jamaica outreach, in black and white" },
+      { "image": "/assets/img/jamaica-outreach-3.jpg", "alt": "Two women embrace and smile for the camera, one raising a peace sign, during the Jamaica outreach, in black and white" },
+      { "image": "/assets/img/jamaica-outreach-4.jpg", "alt": "A volunteer in a cap smiles beside a young girl during the Jamaica outreach, in black and white" }
+    ]
   },
   "more_stories": {
     "eyebrow": "More Stories",
