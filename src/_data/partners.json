@@ -1,52 +1,62 @@
 {
   "partners": [
     {
-      "name": "Fresh Bread Ministries",
-      "location": "Montego Bay, Jamaica",
-      "categories": ["faith-based-ministry", "international-missions"],
-      "brief_overview": "A ministry partner supporting community outreach, health screenings, and family engagement throughout Montego Bay.",
-      "mission": "Serving communities in and around Montego Bay through faith-centered outreach, health support, and family engagement.",
+      "sample": false,
       "partnership_summary": "Ministry partner in the Foundation's Jamaica outreach efforts, supporting community health screenings and children's ministry.",
       "logo": "",
-      "website": "",
+      "name": "Fresh Bread Ministries",
+      "mission": "Serving communities in and around Montego Bay through faith-centered outreach, health support, and family engagement.",
       "featured": true,
-      "sample": false
+      "location": "Montego Bay, Jamaica",
+      "website": "",
+      "categories": [
+        "faith-based-ministry",
+        "international-missions"
+      ],
+      "brief_overview": "A ministry partner supporting community outreach, health screenings, and family engagement throughout Montego Bay."
     },
     {
-      "name": "Refuge of Hope",
-      "location": "Westmoreland, Jamaica",
-      "categories": ["humanitarian-relief", "community-outreach"],
-      "brief_overview": "Serving the Westmoreland region with humanitarian relief, prayer, encouragement, and faith-centered outreach.",
-      "mission": "Providing humanitarian relief, prayer, and encouragement to families throughout the Westmoreland region.",
+      "sample": false,
       "partnership_summary": "Ministry partner supporting outreach efforts and basic medical support alongside Foundation teams.",
       "logo": "",
-      "website": "",
+      "name": "Refuge of Hope",
+      "mission": "Providing humanitarian relief, prayer, and encouragement to families throughout the Westmoreland region.",
       "featured": true,
-      "sample": false
+      "location": "Westmoreland, Jamaica",
+      "website": "",
+      "categories": [
+        "humanitarian-relief",
+        "community-outreach"
+      ],
+      "brief_overview": "Serving the Westmoreland region with humanitarian relief, prayer, encouragement, and faith-centered outreach."
     },
     {
-      "name": "Sample Partner Profile",
-      "location": "City, State",
-      "categories": ["education"],
-      "brief_overview": "",
-      "mission": "Placeholder text demonstrating how an Education-focused partner profile will appear once confirmed.",
+      "sample": true,
+      "partnership_summary": "This card is a template only — replace with confirmed partner content in the CMS.",
+      "logo": "/assets/img/uploads/screenshot-2026-06-06-104621.png",
+      "name": "Integrity National Corporation",
+      "mission": "Integrity",
+      "featured": false,
+      "location": "Maryland, United States",
+      "website": "",
+      "categories": [
+        "education"
+      ],
+      "brief_overview": ""
+    },
+    {
+      "sample": true,
       "partnership_summary": "This card is a template only — replace with confirmed partner content in the CMS.",
       "logo": "",
-      "website": "",
-      "featured": false,
-      "sample": true
-    },
-    {
       "name": "Sample Partner Profile",
-      "location": "City, State",
-      "categories": ["youth-development"],
-      "brief_overview": "",
       "mission": "Placeholder text demonstrating how a Youth Development partner profile will appear once confirmed.",
-      "partnership_summary": "This card is a template only — replace with confirmed partner content in the CMS.",
-      "logo": "",
-      "website": "",
       "featured": false,
-      "sample": true
+      "location": "City, State",
+      "website": "",
+      "categories": [
+        "youth-development"
+      ],
+      "brief_overview": ""
     }
   ]
 }
