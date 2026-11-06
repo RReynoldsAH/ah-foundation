@@ -51,7 +51,7 @@
       "logo": "/assets/img/uploads/partner-little-lights.png",
       "name": "Little Lights",
       "mission": "Since 1995, building trusted relationships in southeast Washington, D.C. to provide academic and youth development, family and economic empowerment, and anti-racism training.",
-      "featured": false,
+      "featured": true,
       "location": "Washington, D.C.",
       "website": "https://littlelights.org",
       "categories": [
@@ -76,20 +76,6 @@
         "family-support"
       ],
       "brief_overview": "A Denver ministry addressing poverty through housing, youth programs, leadership development, and outreach."
-    },
-    {
-      "sample": false,
-      "partnership_summary": "Community partner of the AH Foundation.",
-      "logo": "",
-      "name": "Project Bright Future",
-      "mission": "",
-      "featured": false,
-      "location": "Maryland",
-      "website": "",
-      "categories": [
-        "youth-development"
-      ],
-      "brief_overview": "A youth mentoring program serving young people in Maryland."
     },
     {
       "sample": false,
@@ -118,7 +104,6 @@
       "website": "https://timoteosports.org",
       "categories": [
         "youth-development",
-        "faith-based-ministry",
         "community-outreach"
       ],
       "brief_overview": "Uses sports to engage young people in Philadelphia through mentorship, education, and community building."
@@ -154,21 +139,6 @@
         "international-missions"
       ],
       "brief_overview": "Equips children, youth, and young adults with disabilities, and their families, to live as independently as possible."
-    },
-    {
-      "sample": false,
-      "partnership_summary": "Ministry partner of the AH Foundation.",
-      "logo": "",
-      "name": "We Go To Them",
-      "mission": "Field evangelism that uses the \"we go to them\" approach, taking the message of salvation through Jesus Christ to people in the places where they are already gathered.",
-      "featured": false,
-      "location": "",
-      "website": "https://www.wegotothem.com",
-      "categories": [
-        "faith-based-ministry",
-        "international-missions"
-      ],
-      "brief_overview": "A field evangelism ministry that takes the message of Jesus to people in the places where they already gather."
     }
   ]
 }
