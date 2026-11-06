@@ -180,10 +180,12 @@ isHome: true
             {% include "partials/partner-logo.njk" %}
             <div>
               <div class="partner-name">{{ partner.name }}</div>
+              {%- if partner.location %}
               <div class="partner-loc">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-7.5 7-12a7 7 0 10-14 0c0 4.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
                 {{ partner.location }}
               </div>
+              {%- endif %}
             </div>
           </div>
           <span class="partner-focus">{{ partner.categories[0] | categoryLabel }}</span>

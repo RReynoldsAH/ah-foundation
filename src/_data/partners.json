@@ -31,18 +31,144 @@
       "brief_overview": "Serving the Westmoreland region with humanitarian relief, prayer, encouragement, and faith-centered outreach."
     },
     {
-      "sample": true,
-      "partnership_summary": "This card is a template only — replace with confirmed partner content in the CMS.",
-      "logo": "",
-      "name": "Sample Partner Profile",
-      "mission": "Placeholder text demonstrating how a Youth Development partner profile will appear once confirmed.",
+      "sample": false,
+      "partnership_summary": "International partner of the AH Foundation.",
+      "logo": "/assets/img/uploads/partner-act.png",
+      "name": "ACT: Association for Christian Thoughtfulness",
+      "mission": "Empowering community-based organizations to lead their own development by promoting safe health practices and helping communities understand and advocate for their rights and entitlements.",
       "featured": false,
-      "location": "City, State",
+      "location": "India",
+      "website": "https://actnowindia.org",
+      "categories": [
+        "community-outreach",
+        "family-support"
+      ],
+      "brief_overview": "Helps community-based organizations across India lead their own development through health, counselling, and youth leadership programs."
+    },
+    {
+      "sample": false,
+      "partnership_summary": "Community partner of the AH Foundation.",
+      "logo": "/assets/img/uploads/partner-little-lights.png",
+      "name": "Little Lights",
+      "mission": "Since 1995, building trusted relationships in southeast Washington, D.C. to provide academic and youth development, family and economic empowerment, and anti-racism training.",
+      "featured": false,
+      "location": "Washington, D.C.",
+      "website": "https://littlelights.org",
+      "categories": [
+        "youth-development",
+        "community-outreach",
+        "family-support"
+      ],
+      "brief_overview": "Long-term, year-round support for children, youth, and families in under-resourced Washington, D.C. neighborhoods."
+    },
+    {
+      "sample": false,
+      "partnership_summary": "Ministry partner of the AH Foundation.",
+      "logo": "/assets/img/uploads/partner-open-door-ministries.png",
+      "name": "Open Door Ministries",
+      "mission": "To address poverty, build communities, and cultivate followers of Christ in Denver.",
+      "featured": false,
+      "location": "Denver, Colorado",
+      "website": "https://www.odmdenver.org",
+      "categories": [
+        "faith-based-ministry",
+        "community-outreach",
+        "family-support"
+      ],
+      "brief_overview": "A Denver ministry addressing poverty through housing, youth programs, leadership development, and outreach."
+    },
+    {
+      "sample": false,
+      "partnership_summary": "Community partner of the AH Foundation.",
+      "logo": "",
+      "name": "Project Bright Future",
+      "mission": "",
+      "featured": false,
+      "location": "Maryland",
       "website": "",
       "categories": [
         "youth-development"
       ],
-      "brief_overview": ""
+      "brief_overview": "A youth mentoring program serving young people in Maryland."
+    },
+    {
+      "sample": false,
+      "partnership_summary": "Ministry partner of the AH Foundation.",
+      "logo": "/assets/img/uploads/partner-seeds-of-hope.png",
+      "name": "Seeds of Hope Ministries",
+      "mission": "To demonstrate the life-changing love of Jesus to inmates, ex-offenders, the poor, the homeless, and those trapped in addiction and prostitution.",
+      "featured": false,
+      "location": "Camden, New Jersey",
+      "website": "https://www.seedsofhopeministries.org",
+      "categories": [
+        "faith-based-ministry",
+        "community-outreach",
+        "humanitarian-relief"
+      ],
+      "brief_overview": "A Camden ministry serving people in prison, people re-entering society, people who are homeless, and women struggling with addiction."
+    },
+    {
+      "sample": false,
+      "partnership_summary": "Ministry partner of the AH Foundation.",
+      "logo": "",
+      "name": "Timoteo Sports",
+      "mission": "Using sports as a hook to impact the lives of young people through mentorship, education, and community building. Serving youth since 2004.",
+      "featured": false,
+      "location": "Philadelphia, Pennsylvania",
+      "website": "https://timoteosports.org",
+      "categories": [
+        "youth-development",
+        "faith-based-ministry",
+        "community-outreach"
+      ],
+      "brief_overview": "Uses sports to engage young people in Philadelphia through mentorship, education, and community building."
+    },
+    {
+      "sample": false,
+      "partnership_summary": "International partner of the AH Foundation.",
+      "logo": "/assets/img/uploads/partner-usfch.png",
+      "name": "USFCH: United States Foundation for the Children of Haiti",
+      "mission": "Supporting Haitian-led schools, a hospital in Port-au-Prince, and employment and child-development programs for children and families in Haiti.",
+      "featured": false,
+      "location": "Tulsa, Oklahoma and Haiti",
+      "website": "https://www.usfch.org",
+      "categories": [
+        "international-missions",
+        "education",
+        "humanitarian-relief"
+      ],
+      "brief_overview": "Serving the children of Haiti since 1981 through schools, medical care, employment, and child development."
+    },
+    {
+      "sample": false,
+      "partnership_summary": "International partner of the AH Foundation.",
+      "logo": "/assets/img/uploads/partner-vbf.png",
+      "name": "Vladimir Bryant Foundation",
+      "mission": "To equip and empower children, youth, and young adults with disabilities to achieve the highest level of independence through tailored services, with programs in the USA and Haiti.",
+      "featured": false,
+      "location": "United States and Haiti",
+      "website": "https://www.vladimirbryant.org",
+      "categories": [
+        "family-support",
+        "humanitarian-relief",
+        "international-missions"
+      ],
+      "brief_overview": "Equips children, youth, and young adults with disabilities, and their families, to live as independently as possible."
+    },
+    {
+      "sample": false,
+      "partnership_summary": "Ministry partner of the AH Foundation.",
+      "logo": "",
+      "name": "We Go To Them",
+      "mission": "Field evangelism that uses the \"we go to them\" approach, taking the message of salvation through Jesus Christ to people in the places where they are already gathered.",
+      "featured": false,
+      "location": "",
+      "website": "https://www.wegotothem.com",
+      "categories": [
+        "faith-based-ministry",
+        "international-missions"
+      ],
+      "brief_overview": "A field evangelism ministry that takes the message of Jesus to people in the places where they already gather."
     }
   ]
 }
