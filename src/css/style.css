@@ -552,6 +552,10 @@ body.nav-open { overflow: hidden; }
 
 /* ---------- Stories / impact cards ---------- */
 .story-grid { display: grid; gap: 28px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+/* Tablet (2 columns): centre a lone last card instead of leaving a gap */
+@media (min-width: 636px) and (max-width: 944px) {
+  .story-grid > .story-card:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc(50% - 14px); }
+}
 .story-card {
   background: var(--white);
   border-radius: var(--radius-md);
@@ -811,6 +815,12 @@ body.nav-open { overflow: hidden; }
 /* ---------- Footer ---------- */
 .site-footer { background: var(--forest-950); color: rgba(255,255,255,0.75); padding: 72px 0 28px; }
 .footer-grid { display: grid; gap: 44px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+/* Tablet: keep the 4 footer blocks balanced (brand on top, 3 columns below) */
+@media (min-width: 700px) and (max-width: 1070px) {
+  .footer-grid { grid-template-columns: repeat(3, 1fr); }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-brand p { max-width: 460px; }
+}
 .footer-brand .brand { display: inline-flex; }
 .footer-brand .brand-text { color: var(--white); }
 .footer-brand p { margin-top: 18px; font-size: 14px; line-height: 1.7; max-width: 280px; color: rgba(255,255,255,0.6); }
