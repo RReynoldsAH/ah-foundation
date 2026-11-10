@@ -252,15 +252,18 @@ section { position: relative; }
   width: 44px; height: 44px; border-radius: var(--radius-sm); border: 1.5px solid rgba(255,255,255,0.3);
   background: transparent; color: var(--white); cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
 }
-.mobile-nav ul { margin-top: 40px; display: flex; flex-direction: column; gap: 6px; }
-.mobile-nav a {
+.mobile-nav-close svg { width: 20px; height: 20px; }
+.mobile-nav ul { margin-top: 28px; display: flex; flex-direction: column; gap: 0; }
+.mobile-nav nav a {
+  display: block;
   font-family: var(--font-display);
-  font-size: 28px;
+  font-size: 26px;
   color: var(--cream-100);
-  padding: 14px 4px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 15px 4px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
-.mobile-nav .btn { margin-top: 32px; }
+.mobile-nav nav a:hover, .mobile-nav nav a[aria-current="page"] { color: var(--gold-300); }
+.mobile-nav .btn { margin-top: 32px; font-size: 15px; line-height: 1.35; text-align: center; white-space: normal; padding: 16px 22px; }
 body.nav-open { overflow: hidden; }
 
 /* ---------- Hero ---------- */
@@ -571,6 +574,10 @@ body.nav-open { overflow: hidden; }
 
 /* ---------- Partner cards ---------- */
 .filter-bar { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 44px; }
+@media (max-width: 600px) {
+  .filter-bar { gap: 8px; margin-bottom: 32px; }
+  .filter-chip { padding: 8px 14px; font-size: 13px; }
+}
 .filter-chip {
   padding: 9px 18px;
   border-radius: var(--radius-pill);
