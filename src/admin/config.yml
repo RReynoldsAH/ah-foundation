@@ -19,7 +19,7 @@ local_backend: true
 media_folder: src/assets/img/uploads
 public_folder: /assets/img/uploads
 
-site_url: https://www.ahfoundation.org
+site_url: https://theahfoundation.org
 logo_url: /assets/brand/logo-full.png
 locale: en
 
@@ -253,7 +253,7 @@ collections:
           - { label: Footer Credit Line, name: footer_credit, widget: string, required: false, hint: "Leave empty to hide." }
           - { label: Short Name, name: name, widget: string, hint: "Used in page titles and copy, e.g. AH Foundation" }
           - { label: Full Name (logo wordmark), name: full_name, widget: string, hint: "Shown next to the AH logo in the header and footer." }
-          - { label: Website Address, name: url, widget: string, hint: "The final public address, no trailing slash, e.g. https://www.ahfoundation.org. Used for Google and social-sharing links." }
+          - { label: Website Address, name: url, widget: string, hint: "The final public address, no trailing slash, e.g. https://theahfoundation.org. Used for Google and social-sharing links." }
 
   # ------------------------------------------------------------------ ABOUT
   - name: about
