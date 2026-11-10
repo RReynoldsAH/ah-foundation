@@ -1,0 +1,83 @@
+---
+layout: layouts/base.njk
+tags: pages
+priority: "0.3"
+changefreq: yearly
+title: "Privacy Policy | AH Foundation"
+description: "How the AH Foundation handles the information you share through this website, including the contact form."
+keywords: "AH Foundation privacy policy, website privacy, contact form privacy"
+ogDescription: "How the AH Foundation handles the information you share through this website."
+permalink: "privacy.html"
+breadcrumbName: "Privacy Policy"
+---
+  <section class="page-hero">
+    <div class="hero-bg-pattern" aria-hidden="true"></div>
+    <div class="container">
+      <div class="page-hero-inner">
+        <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Privacy Policy</span></div>
+        <h1>Privacy Policy</h1>
+        <p>We keep this simple: we collect only what we need to respond to you, and we do not sell your information.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-cream">
+    <div class="container">
+      <div class="legal">
+        <p class="legal-updated">Last updated: November 10, 2026</p>
+
+        <p>This policy explains how the {{ site.full_name }} ("the Foundation," "we," or "us") handles information on this website. By using the site, you agree to the practices described here.</p>
+
+        <h2>Information we collect</h2>
+        <p><strong>Information you send us.</strong> When you use the contact form, we receive the details you enter: your name, organization, email address, phone number (optional), the type of inquiry, and your message. If you email us directly, we receive your email address and whatever you include in your message.</p>
+        <p><strong>Basic technical information.</strong> Like most websites, our hosting provider may automatically record standard technical data when a page is requested, such as your IP address, browser type, and the pages you visit. This is used to deliver and secure the site.</p>
+        <p>We do not ask you to create an account, and this site does not require you to share any information in order to browse it.</p>
+
+        <h2>How we use your information</h2>
+        <ul>
+          <li>To read and respond to your message or inquiry.</li>
+          <li>To learn about your organization if you contact us about a partnership.</li>
+          <li>To keep the website running and protect it from spam and misuse.</li>
+        </ul>
+        <p>Sending a message through this site does not guarantee funding, selection, or partnership.</p>
+
+        <h2>Cookies and tracking</h2>
+        <p>This site does not use advertising cookies, and we do not run analytics or tracking tools on it. Our site is built with a hosting service and a form service, described below, that handle your information on our behalf.</p>
+
+        <h2>Service providers</h2>
+        <p>We use trusted third parties to run the site. They process information only to provide their service to us:</p>
+        <ul>
+          <li><strong>Netlify</strong> hosts this website and receives and stores contact form submissions so we can read them. See <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener">Netlify's privacy policy</a>.</li>
+          <li><strong>Google Fonts</strong> supplies the typefaces used on this site. When a page loads, your browser requests the fonts from Google, which means Google receives your IP address. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>.</li>
+          <li><strong>Email provider.</strong> Messages sent to us and notifications of form submissions are delivered through our email service.</li>
+        </ul>
+
+        <h2>Sharing your information</h2>
+        <p>We do not sell, rent, or trade your personal information. We share it only with the service providers above as needed to operate the site, or if we are required to by law.</p>
+
+        <h2>How long we keep it</h2>
+        <p>We keep messages for as long as needed to respond to you and to maintain a record of our relationships with partner organizations. You can ask us to delete your information at any time.</p>
+
+        <h2>Photos on this website</h2>
+        <p>This site includes photographs from Foundation outreach and events. If you would like a photo of you or your child removed, contact us and we will remove it.</p>
+
+        <h2>Children</h2>
+        <p>This website is intended for adults. We do not knowingly collect personal information from children under 13. If you believe a child has sent us information, please contact us and we will delete it.</p>
+
+        <h2>Your choices</h2>
+        <p>You may contact us to ask what information we have about you, to correct it, or to have it deleted. We will respond as soon as we reasonably can.</p>
+
+        <h2>External links</h2>
+        <p>Some pages link to the websites of partner organizations. We are not responsible for the content or privacy practices of other websites, and we encourage you to read their policies.</p>
+
+        <h2>Changes to this policy</h2>
+        <p>We may update this policy from time to time. When we do, we will change the "Last updated" date at the top of this page.</p>
+
+        <h2>Contact us</h2>
+        <p>Questions about this policy or your information? Reach us
+          {%- if site.contact.general_email %} at <a href="mailto:{{ site.contact.general_email }}">{{ site.contact.general_email }}</a>{%- endif %} or through the <a href="contact.html">contact form</a>.
+          {%- if site.contact.mailing_address %}<br>{{ site.contact.mailing_address | nl2br | safe }}{%- endif %}
+        </p>
+      </div>
+    </div>
+  </section>

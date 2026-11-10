@@ -113,7 +113,7 @@ collections:
               - { label: Number, name: value, widget: number, value_type: int, min: 0 }
               - { label: Suffix, name: suffix, widget: string, required: false, hint: "Optional, e.g. + for '150+'" }
               - { label: Label, name: label, widget: string }
-          - { label: Footnote under metrics, name: metrics_note, widget: text, required: false, hint: "Leave EMPTY once the numbers are verified, to remove the placeholder notice." }
+          - { label: Footnote under metrics, name: metrics_note, widget: text, required: false, hint: "Optional. Leave empty for no footnote." }
           - label: Featured Impact Story
             name: featured_story
             widget: object

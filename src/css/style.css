@@ -812,6 +812,16 @@ body.nav-open { overflow: hidden; }
 .footer-col a { font-size: 14.5px; color: rgba(255,255,255,0.65); transition: color var(--dur-sm); }
 .footer-col a:hover { color: var(--gold-300); }
 .footer-bottom { padding-top: 26px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; font-size: 13px; color: rgba(255,255,255,0.62); }
+.footer-legal-link { margin-left: 14px; color: rgba(255,255,255,0.82); text-decoration: underline; text-underline-offset: 3px; }
+.footer-legal-link:hover { color: var(--gold-300); }
+.legal { max-width: 760px; margin: 0 auto; }
+.legal h2 { font-size: 1.35rem; margin: 38px 0 12px; }
+.legal p, .legal li { color: var(--ink-700); font-size: 16px; line-height: 1.75; }
+.legal p { margin-bottom: 14px; }
+.legal ul { margin: 0 0 14px 22px; list-style: disc; }
+.legal li { margin-bottom: 8px; }
+.legal a { color: var(--forest-800); text-decoration: underline; text-underline-offset: 3px; }
+.legal-updated { font-size: 14px !important; color: var(--ink-500) !important; }
 .footer-bottom .social-row a { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.7); }
 .footer-bottom .social-row a:hover { background: var(--gold-500); color: var(--forest-950); }
 
