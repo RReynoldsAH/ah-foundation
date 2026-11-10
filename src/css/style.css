@@ -887,3 +887,18 @@ body.nav-open { overflow: hidden; }
 /* ---------- Partner logo (uploaded image) ---------- */
 .partner-logo.has-image { background: var(--white); border: 1px solid rgba(42, 122, 80, 0.12); padding: 6px; overflow: hidden; }
 .partner-logo.has-image img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+/* ---------- Touch and small-screen refinements ---------- */
+.slideshow-dots .dot { position: relative; }
+.slideshow-dots .dot::after { content: ""; position: absolute; inset: -14px -4px; }
+.breadcrumb a { display: inline-block; padding: 10px 2px; margin: -10px 0; }
+.story-link { padding: 10px 0; }
+.story-tag, .partner-tag { font-size: 12px; }
+.filter-chip { min-height: 40px; }
+@media (max-width: 400px) {
+  .partner-grid, .pillars-grid { grid-template-columns: 1fr; }
+}
+/* iPhones zoom the page when a field is under 16px, so keep form text at 16px on phones and tablets */
+@media (max-width: 1024px) {
+  .field input, .field select, .field textarea { font-size: 16px; }
+}
